@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { withGoogleMap, GoogleMap } from '@react-google-maps/api';
+import { GoogleMap } from '@react-google-maps/api';
 import Marker from './Marker';
 import Polyline from './Polyline';
 import Callout from './Callout';
-
-const GoogleMapContainer = withGoogleMap(props => (
-  <GoogleMap {...props} onLoad={props.handleMapMounted} />
-));
 
 class MapView extends Component {
   state = {
@@ -79,8 +75,8 @@ class MapView extends Component {
     googleMapProps['zoom'] = this.state.zoom ? this.state.zoom : zoom;
     return (
       <View style={style}>
-        <GoogleMapContainer
-          handleMapMounted={this.handleMapMounted}
+        <GoogleMap
+          onLoad={this.handleMapMounted}
           containerElement={<div style={{ height: '100%' }} />}
           mapElement={<div style={{ height: '100%' }} />}
           onZoomChanged={() => {
@@ -93,7 +89,7 @@ class MapView extends Component {
           onClick={onPress}
           options={options}>
           {this.props.children}
-        </GoogleMapContainer>
+        </GoogleMap>
       </View>
     );
   }

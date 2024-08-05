@@ -6,7 +6,7 @@ import Polyline from './Polyline';
 import Callout from './Callout';
 
 const GoogleMapContainer = withGoogleMap(props => (
-  <GoogleMap {...props} ref={props.handleMapMounted} />
+  <GoogleMap {...props} onLoad={props.handleMapMounted} />
 ));
 
 class MapView extends Component {

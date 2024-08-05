@@ -48,7 +48,8 @@
     "webpack": "^3.6.0"
   },
   "peerDependencies": {
-    "react-native-web": "^0.18.12"
+    "react": "*",
+    "react-native": "*"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.19.3"

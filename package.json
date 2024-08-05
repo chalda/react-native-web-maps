@@ -42,8 +42,8 @@
     "babel-preset-react-native": "^4.0.0",
     "eslint": "^5.15.3",
     "prettier": "^1.16.4",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^16.8 || ^17 || ^18",
+    "react-dom": "^16.8 || ^17 || ^18",
     "react-native-web": "^0.18.12",
     "webpack": "^3.6.0"
   },

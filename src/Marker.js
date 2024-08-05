@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Marker } from 'react-google-maps';
+import { Marker } from '@react-google-maps/api';
 
 class MapViewMarker extends Component {
   state = {

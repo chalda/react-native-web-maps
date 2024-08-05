@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Polyline } from 'react-google-maps';
+import { Polyline } from '@react-google-maps/api';
 
 class MapViewPolyline extends Component {
   render() {

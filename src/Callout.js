@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { InfoWindow } from 'react-google-maps';
+import { InfoWindow } from '@react-google-maps/api';
 
 class MapViewCallout extends Component {
   render() {

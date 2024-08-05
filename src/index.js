@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import { withGoogleMap, GoogleMap } from '@react-google-maps/api';
 import Marker from './Marker';
 import Polyline from './Polyline';
 import Callout from './Callout';

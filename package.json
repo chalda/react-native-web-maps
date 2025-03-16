@@ -1,57 +1,61 @@
 {
-  "name": "react-native-web-maps",
-  "version": "0.3.0",
-  "description": "React Native for Web implementation of react-native-maps",
-  "main": "dist/index.js",
-  "main-es": "src/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:react-native-web-community/react-native-web-maps.git"
-  },
-  "author": {
-    "name": "Aurore Malherbes",
-    "email": "aurorem@bam.tech",
-    "url": "https://github.com/aurorem"
-  },
-  "license": "MIT",
-  "keywords": [
-    "react-native",
-    "react-native-web",
-    "react-native-web-maps"
-  ],
-  "scripts": {
-    "prepublish": "yarn build",
-    "build": "mkdir -p dist && babel src --out-dir dist",
-    "test:lint": "yarn eslint . --quiet",
-    "test": "yarn test:lint"
-  },
-  "babel": {
-    "presets": [
-      "react-native"
-    ]
-  },
-  "files": [
-    "dist",
-    "src",
-    "yarn.lock"
-  ],
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-react-native": "^4.0.0",
-    "eslint": "^5.15.3",
-    "prettier": "^1.16.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native-web": "^0.18.12",
-    "webpack": "^3.6.0"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
-  "dependencies": {
-    "@react-google-maps/api": "^2.19.3"
-  }
+    "name": "react-native-web-maps",
+    "version": "1.0.0",
+    "description": "React Native for Web implementation of react-native-maps",
+    "main": "dist/index.js",
+    "main-es": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:react-native-web-community/react-native-web-maps.git"
+    },
+    "author": {
+        "name": "Aurore Malherbes",
+        "email": "aurorem@bam.tech",
+        "url": "https://github.com/aurorem"
+    },
+    "license": "MIT",
+    "keywords": [
+        "react-native",
+        "react-native-web",
+        "react-native-web-maps"
+    ],
+    "scripts": {
+        "prepublish": "yarn build",
+        "build": "mkdir -p dist && babel src --out-dir dist",
+        "test:lint": "yarn eslint . --quiet",
+        "test": "yarn test:lint"
+    },
+    "babel": {
+        "presets": [
+            "react-native"
+        ]
+    },
+    "files": [
+        "dist",
+        "src",
+        "yarn.lock"
+    ],
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-react-native": "^4.0.0",
+        "eslint": "^5.15.3",
+        "prettier": "^1.16.4",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "react-native-web": "0.19.13",
+        "webpack": "^5.0.0"
+    },
+    "peerDependencies": {
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "react-native": "0.76.7",
+        "react-native-maps": "1.18.0",
+        "react-native-web": "0.19.13"
+    },
+    "dependencies": {
+        "@react-google-maps/api": "^2.20.0",
+        "lodash": "^4.17.21"
+    }
 }

@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
-import { InfoWindow } from '@react-google-maps/api';
+import React from "react";
+import { TouchableOpacity } from "react-native-web";
+import { InfoWindow } from "@react-google-maps/api";
 
-class MapViewCallout extends Component {
-  render() {
-    const { onPress, ...rest } = this.props;
+const MapViewCallout = ({ onPress, hideCallout, children, ...rest }) => {
     return (
-      <TouchableOpacity onPress={onPress}>
-        <InfoWindow onCloseClick={this.props.hideCallout} {...rest}>
-          {this.props.children}
-        </InfoWindow>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
+            <InfoWindow onCloseClick={hideCallout} {...rest}>
+                {children}
+            </InfoWindow>
+        </TouchableOpacity>
     );
-  }
-}
+};
 
 export default MapViewCallout;

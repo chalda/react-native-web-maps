@@ -25,7 +25,7 @@ const MapView = (props) => {
         onPress,
         options,
         defaultZoom,
-        PROVIDER
+        PROVIDER,
     } = props;
     const containerStyle = props.style || styles.container;
 
@@ -34,7 +34,7 @@ const MapView = (props) => {
     const mapRef = useRef(null);
 
     const { isLoaded, loadError } = useJsApiLoader({
-        PROVIDER,
+        googleMapsApiKey: PROVIDER,
         libraries,
     });
 

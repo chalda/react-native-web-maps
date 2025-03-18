@@ -3,7 +3,7 @@ import { Marker } from "@react-google-maps/api";
 
 class MapViewMarker extends Component {
     state = {
-        isOpen: false,
+        isOpen: false
     };
     showCallout() {
         this.setState({ isOpen: true });
@@ -16,9 +16,9 @@ class MapViewMarker extends Component {
 
         const childrenWithProps = React.Children.map(
             this.props.children,
-            (child) => {
+            child => {
                 return React.cloneElement(child, {
-                    hideCallout: this.hideCallout.bind(this),
+                    hideCallout: this.hideCallout.bind(this)
                 });
             }
         );
@@ -28,7 +28,7 @@ class MapViewMarker extends Component {
                 title={description ? `${title}\n${description}` : title}
                 position={{
                     lat: coordinate.latitude,
-                    lng: coordinate.longitude,
+                    lng: coordinate.longitude
                 }}
                 onClick={onPress}
             >

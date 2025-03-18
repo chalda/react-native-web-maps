@@ -21,12 +21,13 @@
     ],
     "scripts": {
         "prepublish": "yarn build",
-        "build": "mkdir -p dist && babel src --out-dir dist",
+        "build": "tsc && babel src --out-dir dist",
         "test:lint": "yarn eslint . --quiet",
         "test": "yarn test:lint"
     },
     "babel": {
         "presets": [
+            "@babel/preset-typescript",
             "react-native"
         ]
     },
@@ -36,16 +37,25 @@
         "yarn.lock"
     ],
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
-        "babel-preset-react-native": "^4.0.0",
-        "eslint": "^5.15.3",
-        "prettier": "^1.16.4",
+        "@babel/cli": "7.26.4",
+        "@babel/core": "^7.26.10",
+        "@babel/preset-typescript": "^7.26.0",
+        "@react-native-community/cli": "^18.0.0",
+        "@types/lodash": "^4.17.16",
+        "@types/react": "18.3.18",
+        "@types/react-dom": "18.3.5",
+        "@types/react-native-maps": "^0.24.1",
+        "@types/react-native-web": "^0.19.0",
+        "babel-loader": "^10.0.0",
+        "babel-preset-react-native": "^5.0.2",
+        "eslint": "^9.22.0",
+        "prettier": "^3.5.3",
         "react": "18.3.1",
         "react-dom": "18.3.1",
+        "react-native": "0.76.7",
         "react-native-web": "0.19.13",
-        "webpack": "^5.0.0"
+        "typescript": "^5.8.2",
+        "webpack": "^5.98.0"
     },
     "peerDependencies": {
         "react": "18.3.1",
@@ -55,7 +65,7 @@
         "react-native-web": "0.19.13"
     },
     "dependencies": {
-        "@react-google-maps/api": "^2.20.0",
+        "@react-google-maps/api": "^2.20.6",
         "lodash": "^4.17.21"
     }
 }

@@ -23,12 +23,13 @@ const libraries: Libraries = [
 
 type CombinedProps = MapViewProps & GoogleMapApiProps;
 
-const MapView: React.FC<CombinedProps> = (props) => {
+const MapView: React.FC<any> = (props) => {
     const {
         region,
         initialRegion,
         onRegionChange,
         onPress,
+        googleMapsApiKey,
         options,
         provider,
         zoom,
@@ -43,7 +44,7 @@ const MapView: React.FC<CombinedProps> = (props) => {
     // @ts-ignore
     const { isLoaded, loadError } = useJsApiLoader({
         // @ts-ignore
-        googleMapsApiKey: provider,
+        googleMapsApiKey: googleMapsApiKey,
         libraries,
     });
 
